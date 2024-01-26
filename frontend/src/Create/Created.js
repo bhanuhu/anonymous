@@ -24,7 +24,7 @@ const bull = (
 export default function OutlinedCard() {
   const navigate = useNavigate();
   const eventhandler=()=>{
-    navigate('/inside')
+    navigate('../inside')
 
   }
     

@@ -35,16 +35,16 @@ const Inside = () => {
     fetchData();
   }, [load]);
   const allposthandler=()=>{
-    navigate('/inside')
+    navigate('../inside')
   }
   const commenthandler=()=>{
-    navigate('/commented')
+    navigate('../commented')
   }
   const replyhandler=()=>{
-    navigate('/replied')
+    navigate('../replied')
   }
   const createhandler=()=>{
-    navigate('/createpost')
+    navigate('../createpost')
   }
   const [comment,setcomment]=useState('')
   const handleChange=(e)=>{

@@ -50,7 +50,7 @@ export default function OutlinedCard() {
       if (res.status === 201) {
         alert("user verified");
         
-        navigate('./created');
+        navigate('.../created');
       } else if (res.status === 403) {
         console.log(data);
         alert(data);

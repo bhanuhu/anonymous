@@ -8,11 +8,11 @@ const IndianUserText = () => {
   const navigate = useNavigate();
 
   const onclickhandler=()=>{
-    navigate('/create')
+    navigate('../create')
 
   }
   const onclickhandler1=()=>{
-    navigate('/sign')
+    navigate('../sign')
     
   }
 

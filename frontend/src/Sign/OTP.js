@@ -50,7 +50,7 @@ export default function OutlinedCard() {
       if (res.status === 201) {
         alert("user verified");
         localStorage.setItem("userDataToken", data.result.token);
-        navigate('/inside');
+        navigate('../inside');
       } else if (res.status === 403) {
         console.log(data);
         alert(data);

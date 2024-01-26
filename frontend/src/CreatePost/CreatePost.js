@@ -44,16 +44,16 @@ const Inside = () => {
   };}
   
   const allposthandler=()=>{
-    navigate('/inside')
+    navigate('../inside')
   }
   const commenthandler=()=>{
-    navigate('/commented')
+    navigate('../commented')
   }
   const replyhandler=()=>{
-    navigate('/replied')
+    navigate('../replied')
   }
   const createhandler=()=>{
-    navigate('/createpost')
+    navigate('../createpost')
   }
   const handleChange = (e) => {
     setvalues((values) => ({ ...values, [e.target.name]: e.target.value }));

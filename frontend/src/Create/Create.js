@@ -60,7 +60,7 @@ export default function OutlinedCard() {
         localStorage.setItem("email", email);
         //navigate to OTP FOR SIGN IN and Email sent to entered Email id
         
-        navigate('/first');
+        navigate('../first');
       } else if (res.status === 403) {
         console.log(data);
         alert(data);
