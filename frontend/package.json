@@ -54,7 +54,7 @@
   "start": "react-scripts start",
   
     
-  "build": "react-scripts build && echo f | xcopy /f /y _redirects .\\build\\_redirects",
+  "build": "react-scripts build ",
   
     
   "test": "react-scripts test",

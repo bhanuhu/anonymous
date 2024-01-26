@@ -38,10 +38,12 @@ export default function OutlinedCard() {
     if (values.name !== "" && values.email !== "") {
       const { name, email } = values;
 
-      const res = await fetch("/signin", {
+      const res = await fetch("/api/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin" : "*", 
+          "Access-Control-Allow-Credentials" : true 
         },
         body: JSON.stringify({
           name: name,
