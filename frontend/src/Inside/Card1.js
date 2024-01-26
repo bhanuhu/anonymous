@@ -15,7 +15,7 @@ const Card=(props)=>{
   const [data, setData] = useState(null);
   const fetchData = async () => {
     console.log(id);
-    const res = await fetch('/getReply', {
+    const res = await fetch('https://anonymous-backend-yuuk.onrender.com/getReply', {
       method: "post",
       headers: {
         "content-type": "application/json",
@@ -43,7 +43,7 @@ const Card=(props)=>{
   const handleSubmit=async (e)=>{
     e.preventDefault()
     console.log(addreply);
-        const res = await fetch('/addReply', {
+        const res = await fetch('https://anonymous-backend-yuuk.onrender.com/addReply', {
           method: "post",
           headers: {
             "content-type": "application/json",

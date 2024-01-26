@@ -32,7 +32,7 @@ export default function OutlinedCard() {
     e.preventDefault();
     // console.log("values: ", otp);
     if (otp !== "") {
-      const res = await fetch('/api/otpVerificationForLogin', {
+      const res = await fetch('https://anonymous-backend-yuuk.onrender.com/api/otpVerificationForLogin', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

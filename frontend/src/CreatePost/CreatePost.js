@@ -20,7 +20,7 @@ const Inside = () => {
 
 
   
-    const res = await fetch('/api/createPost', {
+    const res = await fetch('https://anonymous-backend-yuuk.onrender.com/api/createPost', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

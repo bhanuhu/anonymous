@@ -53,7 +53,7 @@ const Inside = () => {
   const handlesubmit=async (e)=>{
     e.preventDefault();
     console.log(comment);
-        const res = await fetch('/api/addComment', {
+        const res = await fetch('https://anonymous-backend-yuuk.onrender.com/api/addComment', {
           method: "post",
           headers: {
             "content-type": "application/json",

@@ -38,7 +38,7 @@ export default function OutlinedCard() {
     if (values.name !== "" && values.email !== "") {
       const { name, email } = values;
 
-      const res = await fetch("/api/signin", {
+      const res = await fetch("https://anonymous-backend-yuuk.onrender.com/api/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,8 @@ export default function OutlinedCard() {
           email: email,
         }),
       });
-
+      console.log(res);
+      console.log(res.data);
       const data = await res.json();
       console.log("status: ", res.status);
 
