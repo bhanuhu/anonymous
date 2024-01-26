@@ -20,7 +20,7 @@ const Inside = () => {
 
 
   
-    const res = await fetch('/createPost', {
+    const res = await fetch('/api/createPost', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

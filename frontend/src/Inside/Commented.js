@@ -9,7 +9,7 @@ const Inside = () => {
   const [data, setData] = useState([]);
 
   const fetchData = async () => {
-    const res = await fetch(`/getCommentedPost?name=${localStorage.getItem("name")}`, {
+    const res = await fetch(`/api/getCommentedPost?name=${localStorage.getItem("name")}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

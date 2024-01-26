@@ -19,7 +19,7 @@ let transporter = nodemailer.createTransport({
   },
 });
 
-router.post("/signin", async (req, res) => {
+router.post("/api/signin", async (req, res) => {
   const { name, email } = req.body;
 
   if (!name || !email) {
@@ -60,7 +60,7 @@ router.post("/signin", async (req, res) => {
   }
 });
 
-router.post("/otpVerificationForSignup", async (req, res) => {
+router.post("/api/otpVerificationForSignup", async (req, res) => {
   const { name, email, otp } = req.body;
 
   if (!otp) {
@@ -89,7 +89,7 @@ router.post("/otpVerificationForSignup", async (req, res) => {
   }
 });
 
-router.post("/login", async (req, res) => {
+router.post("/api/login", async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
@@ -129,7 +129,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.post("/otpVerificationForLogin", async (req, res) => {
+router.post("/api/otpVerificationForLogin", async (req, res) => {
   const { email, otp } = req.body;
 
   if (!otp || !email) {
@@ -169,7 +169,7 @@ router.post("/otpVerificationForLogin", async (req, res) => {
   }
 });
 
-router.post("/createPost", async (req, res) => {
+router.post("/api/createPost", async (req, res) => {
   const { title, description } = req.body;
 
   if (!title || !description) {
@@ -196,7 +196,7 @@ router.post("/createPost", async (req, res) => {
   }
 });
 
-router.post("/addComment", async (req, res) => {
+router.post("/api/addComment", async (req, res) => {
   const { id, name, comment } = req.body;
 
   if (!id || !name || !comment) {
@@ -236,7 +236,7 @@ router.post("/addComment", async (req, res) => {
   }
 });
 
-router.post("/addReply", async (req, res) => {
+router.post("/api/addReply", async (req, res) => {
   const { postid, commentid, name, comment } = req.body;
 
   if (!postid || !name || !comment || !commentid) {
@@ -277,7 +277,7 @@ router.post("/addReply", async (req, res) => {
   }
 });
 
-router.get("/getCommentedPost", async (req, res) => {
+router.get("/api/getCommentedPost", async (req, res) => {
   const name = req.query.name;
 
   if (!name) {
@@ -306,7 +306,7 @@ router.get("/getCommentedPost", async (req, res) => {
   }
 });
 
-router.get("/getRepliedPost", async (req, res) => {
+router.get("/api/getRepliedPost", async (req, res) => {
   const name = req.query.name;
 
   if (!name) {
@@ -335,7 +335,7 @@ router.get("/getRepliedPost", async (req, res) => {
   }
 });
 
-router.get("/getposts", async (req, res) => {
+router.get("/api/getposts", async (req, res) => {
   try {
     const result = await Post.find({});
     res.status(201).json({ status: 201, result });
@@ -343,7 +343,7 @@ router.get("/getposts", async (req, res) => {
     res.status(400).json({ status: 400, error });
   }
 });
-router.get("/getSinglePosts", async (req, res) => {
+router.get("/api/getSinglePosts", async (req, res) => {
   const id = req.query.id;
   try {
     const result = await Post.findOne({ _id:id });
@@ -352,7 +352,7 @@ router.get("/getSinglePosts", async (req, res) => {
     res.status(400).json({ status: 400, error });
   }
 });
-router.post("/getReply", async (req, res) => {
+router.post("/api/getReply", async (req, res) => {
   const { postID, commentID } = req.body;
   try {
     const result1 = await Post.findOne({ _id: postID });

@@ -10,7 +10,7 @@ const Inside = () => {
   const [data, setData] = useState([]);
 
   const fetchData = async () => {
-    const res = await fetch('/getposts', {
+    const res = await fetch('/api/getposts', {
       method: "GET",
       headers: {
         "content-type": "application/json",

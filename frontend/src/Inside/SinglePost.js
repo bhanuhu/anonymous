@@ -15,7 +15,7 @@ const Inside = () => {
 
   const fetchData = async () => {
     console.log(id);
-    const res = await fetch(`/getSinglePosts?id=${id}`, {
+    const res = await fetch(`/api/getSinglePosts?id=${id}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -53,7 +53,7 @@ const Inside = () => {
   const handlesubmit=async (e)=>{
     e.preventDefault();
     console.log(comment);
-        const res = await fetch('/addComment', {
+        const res = await fetch('/api/addComment', {
           method: "post",
           headers: {
             "content-type": "application/json",
